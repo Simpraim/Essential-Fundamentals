@@ -1,0 +1,12 @@
+VPC- Virtual Private Cloud
+Private subnet- its cant be reached from the outside
+public subnet - 
+Sandbox creation
+step 1- create VPC
+step 2- divide VPC 
+step 3- define traffic pattern with route tables
+step 4- Add internet gateway
+step 4a - connect to VPC
+step 4b - set routes accordingly
+step 5- add instance
+
