@@ -14,8 +14,18 @@ int main(){
 
 return 0;
 }
+-EACH LINE OF CODE THAT IS TO BE COMPILED (not including inclusions, comments) MUST END IN A SEMI COLON.
 
 _____________________________________________________________________________________________________________________________________________________________________________________________
+
+**Comments**
+-Comments are for the user to read. The compiler does not recognize comments
+-Commenting strategies
+	-Single line comments are started with a "//" and end once a new line starts
+	-Multi-line comments are started with "/*" and ended with "*/".  The can be shorter than a line or span multiple lines.
+
+_____________________________________________________________________________________________________________________________________________________________________________________________
+
 
 
 **Variables**
@@ -56,6 +66,48 @@ ________________________________________________________________________________
 	-Hint: you can output multiple things in one line: cout << a << b << c << end;
 
 _____________________________________________________________________________________________________________________________________________________________________________________________
+
+**Boolean Variables and other operators**
+-Can either be true or false;
+-Boolean Variable Declaration: bool isAwake = true; or bool isAwake = false;
+-Boolean operators can help with conditional statements and loops
+- Logical "and": &&
+-Logical "or": ||
+Less than operator: <
+Greater than operator: >
+Less than or equal to: =>
+Greater than or equal to: =<
+Equality operator: ==
+Inequality operator: !=
+_____________________________________________________________________________________________________________________________________________________________________________________________
+
+**If statements**
+-A block of code that only gets entered if the conditions are met
+-Syntax:
+if (condition){
+//Some code
+//optional return value
+}
+
+-You can have multiple if statements for mutiple condtions using "else if"
+-If no other condition is met, the final statement "else" can be used with no coditions
+-Example:
+int a = 5;
+
+if (a == 3){
+return true;
+}
+else if (a == 5){
+return false;
+}
+
+else{
+return true;
+}
+
+_____________________________________________________________________________________________________________________________________________________________________________________________
+
+
 **A simple test program**
 Step 1: Open a text editor or IDE and name the file "test.cpp"
 Step 2: Write a program that asks for a name, age, GPA, and favorite letter.
