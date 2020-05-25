@@ -1,1 +1,88 @@
-Start Points
+
+Purpose: Accumulated notes from CS1210/1220
+
+**Basic Program Structure (No header files) **
+
+#include <some_library>
+
+using namespace std;
+
+int main(){
+
+//Variable declarations
+//Commands; expressions; calculations; evaluations
+
+return 0;
+}
+
+_____________________________________________________________________________________________________________________________________________________________________________________________
+
+
+**Variables**
+ Definition - Objects that stores data
+-Syntax - data_type variableName; or data_type variableName = intial_value;
+-Variable have a data type they can hold
+	-Examples: int (1) 
+                   float/double (1.0) 
+                   bool (true/false) 
+                   char ('a'/ '4')
+                   *string ("This is a string")*
+        -String are not a default variable type. Must #include <iostream> or <string>
+-Variables are case sensitive
+	-Example: int a; is different from int A; 
+-Normal variable use camel case
+	-Example: myVariable; yourVariable; myNumber; yourNumber;
+-Variables should't be keywords
+	-List of keywords: https://en.cppreference.com/w/cpp/keyword
+-The assignment operator "=" is used to assign a value to a variable;
+
+-int declaration: int a; or int a = 4;
+-double/float declaration: double b; or double b = 4.0; (you can substitute double for float)
+-bool declaration: bool isCorrect; or bool isCorrect = true;
+-char delclaration: char c; or char c = 'C'; (char can only hold a single value, however you can use a character array to create a string of characters, use single quotes)
+-string declaration: string d; or string d = "This is my string" (Strings have special functions that can do different things)
+
+_____________________________________________________________________________________________________________________________________________________________________________________________
+
+**Standard inputting/outputting**
+-Standard input is typically the keyboard
+-Standard output is typically a monitor screen
+-To input/output:
+	-Step 1: #include<iostream>
+	-Step 2: Output: cout << variable; or cout <<"Some text"; or cout << variable << " " << "Some text";
+	-Step 2a: Input: cin >> variable; 
+	-Hint: When running your first program, you might want to output a prompt asking for input, then take in the input
+	-Hint: cout << endl; is a newline character. It is the same as pressing enter in a text editor.  
+	-Hint: you can output multiple things in one line: cout << a << b << c << end;
+
+_____________________________________________________________________________________________________________________________________________________________________________________________
+**A simple test program**
+Step 1: Open a text editor or IDE and name the file "test.cpp"
+Step 2: Write a program that asks for a name, age, GPA, and favorite letter.
+Step 3: Output the user's profile. It should look like this: name - Jason, age - 15, GPA - 3.4, favorite letter - g;
+
+Solution:
+#include <iostream>
+using namespace std;
+
+int main(){
+    int age;
+    string name;
+    char favLetter;
+    double gpa;
+    cout << "Please enter a name: " << endl;
+    cin >> name;
+    cout << "Please enter your age: " << endl;
+    cin >> age;
+    cout << "Please enter your favorite letter: " << endl;
+    cin >> favLetter;
+    cout << "Please enter your GPA: " << endl;
+    cin >> gpa;
+
+    cout << "Name: " << name <<" Age: " << age << " Favorite letter: " << favLetter << " GPA: " << gpa;
+
+    return 0;
+
+}
+
+_____________________________________________________________________________________________________________________________________________________________________________________________
