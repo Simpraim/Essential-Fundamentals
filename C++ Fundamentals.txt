@@ -80,6 +80,30 @@ Greater than or equal to: =<
 Equality operator: ==
 Inequality operator: !=
 _____________________________________________________________________________________________________________________________________________________________________________________________
+**C++ Style Strings**
+-These strings are a class specifically made for c++
+-They differ for C-Style strings becuase they are not stored as character arrays
+-Declaring a string object:
+	-string variableName; or string variableName = "My string";
+-You can concatenate or add strings using the "+" operator:
+string a ="My";
+string b = " String";
+string c = a + b;
+cout << c;
+//the output would be: My String
+
+*Formatting Tip*
+using the 'endl' keyword impliments a newline character.
+Example: 
+cout << a << endl << b << c;
+//Output would be:
+My 
+StringMy String
+
+
+
+
+_____________________________________________________________________________________________________________________________________________________________________________________________
 
 **If statements**
 -A block of code that only gets entered if the conditions are met
@@ -107,6 +131,35 @@ return true;
 
 _____________________________________________________________________________________________________________________________________________________________________________________________
 
+**Loops**
+-2 Common Loop types: While loops and for loops
+-While Loops syntax:
+
+while (boolean expression){
+//action
+}
+
+EXAMPLE:
+int numStudents = 1;
+while (numStudents != 5){
+  cout << "Welcome"; 
+  numStudents++;
+}
+//This loop will print "Welcome" until numStudents == 5.
+
+-For Loop syntax:
+
+for (init expression; test expression; mod expression){
+//action
+}
+
+EXAMPLE:
+ for (int i = 0; i < 5; i++){
+cout << i;
+}
+//This will print out numbers 1 -4
+ 
+_____________________________________________________________________________________________________________________________________________________________________________________________
 
 **A simple test program**
 Step 1: Open a text editor or IDE and name the file "test.cpp"
@@ -138,3 +191,41 @@ int main(){
 }
 
 _____________________________________________________________________________________________________________________________________________________________________________________________
+
+**Compiling Code**
+-To run your code, you have to compile it into a executable file
+-To compile (in terminal/command prompt/Powershell) :
+	-gcc test.cpp
+	-This will result in the creation of a file called a.exe or a.out (Linux systems)
+	-To run it, just type a.out or a.exe
+	-If you want the executable to have a specific name:
+		-gcc test.cpp -o desired name
+_____________________________________________________________________________________________________________________________________________________________________________________________
+**User Defined Functions**
+-Purpose: Sometimes when coding, you will find yourself repeating the same process over and over again.  To conserve space in code we create function.
+-Functions in the main.cpp code:
+//Function definition
+//int main() code with function call
+//function implimentation
+
+-The function definition is above the main code.  This is so that when the complier compiles the code, it sees the definition, then the call in int main().  If it sees the function call 
+first it will output and error.
+-Syntax for Function defitition:
+return_type functionName(parameters*){}
+*sometimes parameters are not needed
+
+-The function implimentation is usually combined with the definition at the top or is below the int main() code.
+-Syntax for function implimentation:
+return_type functionName(parameters){
+//code  
+return return_type;
+}
+
+-When you call a function with your parameters, you are taking your variables and manipulating them using the code in the function.
+-Syntax for function call #1:
+functionName(your parameters);
+
+-Syntax for function call #2:
+variableName = functionName(yourparameters);
+_____________________________________________________________________________________________________________________________________________________________________________________________
+
