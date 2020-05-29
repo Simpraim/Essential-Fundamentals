@@ -73,12 +73,23 @@ ________________________________________________________________________________
 -Boolean operators can help with conditional statements and loops
 - Logical "and": &&
 -Logical "or": ||
-Less than operator: <
-Greater than operator: >
-Less than or equal to: =>
-Greater than or equal to: =<
-Equality operator: ==
-Inequality operator: !=
+-Less than operator: <
+-Greater than operator: >
+-Less than or equal to: =>
+-Greater than or equal to: =<
+-Equality operator: ==
+-Inequality operator: !=
+-Increment (adding one): variableName++;  Note: Incrementing is the same as doing variableName = variableName + 1;  It saves space in code.
+-Decrement (subtracting one): variableName--; Note Decrementing is the same as doing variableName = variableName -1; It saves space in code.
+
+*Arithmetic Operators*
+-Addition operator: +
+-Subtraction operator: -
+-Division operator: /
+-Multiplication: *
+-Modululus operator: %
+	-About modulus: https://www.geeksforgeeks.org/modulo-operator-in-c-cpp-with-examples/
+-To do more complex mathematical operations: http://www.cplusplus.com/reference/cmath/
 _____________________________________________________________________________________________________________________________________________________________________________________________
 **C++ Style Strings**
 -These strings are a class specifically made for c++
@@ -196,7 +207,7 @@ ________________________________________________________________________________
 -To run your code, you have to compile it into a executable file
 -To compile (in terminal/command prompt/Powershell) :
 	-gcc test.cpp
-	-This will result in the creation of a file called a.exe or a.out (Linux systems)
+	-This will result in the creation of a file called a.exe (Windows Systems) or a.out (Linux systems)
 	-To run it, just type a.out or a.exe
 	-If you want the executable to have a specific name:
 		-gcc test.cpp -o desired name
@@ -224,8 +235,43 @@ return return_type;
 -When you call a function with your parameters, you are taking your variables and manipulating them using the code in the function.
 -Syntax for function call #1:
 functionName(your parameters);
-
 -Syntax for function call #2:
 variableName = functionName(yourparameters);
+
+*Pass by value vs Pass by reference*
+-When you pass a variable as a parameter for a function, you are either passing its value or its reference
+-When you pass a value, you are taking the value stored in the variable and manipulating it
+	-When you leave the function scope the variable has the same value that it had before it was manipulated by the function
+
+	-Example:
+	int addNum(int a){
+	     a++;
+             return a;
+             }
+        int main(){
+         int myNum = 7; 
+         addNum(myNym);
+         cout << myNum;
+	 return 0;
+	 }
+         //the output would be 7
+	
+
+
+-When you pass a reference (using '&') you are taking the varible itself and manipulating it within the function
+	-When you leave the function the variable stores whatever value was given to it by the function code
+	Example:
+	int addNum(int &a){
+	     a++;
+             return a;
+             }
+        int main(){
+         int myNum = 7; 
+         addNum(myNym);
+         cout << myNum;
+	 return 0;
+         }
+         //the output would be 8
+	
 _____________________________________________________________________________________________________________________________________________________________________________________________
 
