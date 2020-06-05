@@ -1,4 +1,3 @@
-
 Purpose: Accumulated notes from CS1210/1220
 
 **Basic Program Structure (No header files) **

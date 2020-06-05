@@ -1,0 +1,35 @@
+**Simple docker commands **
+-Container
+	-An instance of an image
+-docker 
+	-Shows different command types
+-docker run image command 
+	-Runs a command inside of a new container
+	-docker run -it 
+		-Allows you to input and output from the container
+-docker image 
+	-Shows images that we have pulled
+-docker search image 
+	-Searches for an image in the public docker repository
+-docker pull image
+	-Downloads the image
+-docker ps 
+	-Shows all of the running containers
+	-ps -a
+	-shows all containers
+-docker start containerID
+	-Starts a container 
+-docker exec -it
+	-Executes commands into the container
+-docker stop containerID 
+	-stops the container from being active
+	-More civilized 
+-docker kill containerID
+	-Kills all the processes within the container
+	-Force kill
+-docker create image
+	-Creates a container as an image
+
+
+
+
