@@ -1,0 +1,62 @@
+** Including node modules **
+const objectName = require('module name') //For core node modules
+
+**Including your own files **
+require('./filename'); //Runs the file on that line
+
+module.exports  = class, variable, methods;//defines what can be used by other files
+	-When using this, require returns whatever was assigned to module.exports
+
+**Loading in npm modules **
+-Initialize npm in the root project
+	-command: npm init -y
+-Installing npm module
+	-npm install module@versionNumbers
+-use require
+
+**Global npm modules**
+-Global installation
+	-npm install packageName@versionName -g // -g is a flag for global
+
+**Command line arguments **
+-To get command line arguments: process.argv[i] //where i is some integer
+
+
+**yargs**
+-Parses through command line argument
+-Adding commands to your program
+	-yargs.command({})
+		-command, describe, builder (for options for each command), handler (what happens when the command is executed)
+			-Within builder
+				-describe, demandOption(to make it necessary for an option to be used in a command), type (to require a specific type)
+
+**JSON**
+-stringify
+	-Take an object and converts it into a string
+-parse
+	-Parses through a json string to find elements of an object
+	-Returns an object
+
+**Arrow Functions**
+-Don't bind their own this value
+-Arrow functions probably should not be used when implementing methods for an object
+
+**Filter vs Find method**
+-Filter looks through an array and does not stop until it reaches the end of the array
+-Find stops once it finds what it needs
+
+**Helpful methods**
+-toString
+	-Converts binary buffer data (like the types returned from reading a .json file) to a string
+	-fs.ReadFileSync returns a binary data buffer, so toString is needed to convert it to a string
+
+
+**Debugging strategies**
+-console.log() a variable to see where the issue is
+-debugger keyword
+	-Kinda like setting a break point
+	-To utilize:
+		-node --inspect-brk in the terminal followed by normal commands to run the script
+-chrome debugger
+	-go to chrome://inspect
+	-

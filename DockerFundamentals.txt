@@ -21,6 +21,7 @@
 	-Starts a container 
 -docker exec -it
 	-Executes commands into the container
+	-docker exec <container id> /bin/sh
 -docker stop containerID 
 	-stops the container from being active
 	-More civilized 
